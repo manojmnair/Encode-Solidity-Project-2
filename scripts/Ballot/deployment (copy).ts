@@ -17,7 +17,7 @@ function convertStringArrayToBytes32(array: string[]) {
 }
 
 async function main() {
-  const wallet =
+/*   const wallet =
     process.env.MNEMONIC && process.env.MNEMONIC.length > 0
       ? ethers.Wallet.fromMnemonic(process.env.MNEMONIC)
       : new ethers.Wallet(process.env.PRIVATE_KEY ?? EXPOSED_KEY);
@@ -30,7 +30,7 @@ async function main() {
   if (balance < 0.01) {
     throw new Error("Not enough ether");
   }
-  console.log("Deploying Ballot contract");
+  console.log("Deploying Ballot contract"); */
   console.log("Proposals: ");
   const proposals = process.argv.slice(2, 5);
   if (proposals.length < 2) throw new Error("Not enough proposals provided");
@@ -38,14 +38,14 @@ async function main() {
     console.log(`Proposal N. ${index + 1}: ${element}`);
   });
   //console.log(`Arg3: ${process.argv.slice(2, 4)}`);
-  //console.log(`Arg5: ${process.argv.slice(5)}`);
-  
-  const customBallotFactory = new ethers.ContractFactory(
+  console.log(`Arg5: ${process.argv.slice(5)}`);
+  return;
+/*   const customBallotFactory = new ethers.ContractFactory(
     customBallotJson.abi,
     customBallotJson.bytecode,
     signer
   );
-  const tokenAddress = "0xe95E54Bc0eeC8d3c51B0486d127ADf93Edd4e6bc";
+  const tokenAddress = "0xe95E54Bc0eeC8d3c51B0486d127ADf93Edd4e6bc"
   const customBallotContract = await customBallotFactory.deploy(
     convertStringArrayToBytes32(proposals),
     tokenAddress
@@ -53,7 +53,7 @@ async function main() {
   console.log("Awaiting confirmations");
   await customBallotContract.deployed();
   console.log("Completed");
-  console.log(`Contract deployed at ${customBallotContract.address}`);
+  console.log(`Contract deployed at ${customBallotContract.address}`); */
 }
 
 main().catch((error) => {

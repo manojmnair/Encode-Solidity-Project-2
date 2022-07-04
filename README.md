@@ -1,15 +1,13 @@
 # Weekend Project #2
 
 - Structure scripts to
-  - Deploy
-  - Query proposals
-  - Give vote right passing an address as input
-  - Cast a vote to a ballot passing contract address and proposal as input and using the wallet in environment
-  - Delegate my vote passing user address as input and using the wallet in environment
-  - Query voting result and print to console
+  - Deploy everything
+  - Interact with the ballot factory
+  - Query proposals for each ballot
+  - Operate scripts
 - Publish the project in Github
-- Run the scripts with a set of proposals, cast and delegate votes and inspect results
-- Write a report detailing the addresses, transaction hashes, description of the operation script being executed and console output from script execution for each step (Deployment, giving voting rights, casting/delegating and querying results).
+- Run the scripts with a few set of proposals, play around with token balances, cast and delegate votes, create ballots from snapshots, interact with the ballots and inspect results
+- Write a report detailing the addresses, transaction hashes, description of the operation script being executed and console output from script execution for each step
 - (Extra) Use TDD methodology
 
 ### Step 1 Deploy Contracts

@@ -1,46 +1,45 @@
-# Advanced Sample Hardhat Project
+# Weekend Project #2
 
-This project demonstrates an advanced Hardhat use case, integrating other tools commonly used alongside Hardhat in the ecosystem.
+- Structure scripts to
+  - Deploy
+  - Query proposals
+  - Give vote right passing an address as input
+  - Cast a vote to a ballot passing contract address and proposal as input and using the wallet in environment
+  - Delegate my vote passing user address as input and using the wallet in environment
+  - Query voting result and print to console
+- Publish the project in Github
+- Run the scripts with a set of proposals, cast and delegate votes and inspect results
+- Write a report detailing the addresses, transaction hashes, description of the operation script being executed and console output from script execution for each step (Deployment, giving voting rights, casting/delegating and querying results).
+- (Extra) Use TDD methodology
 
-The project comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts. It also comes with a variety of other tools, preconfigured to work with the project code.
+### Step 1 Deploy Contracts
 
-Try running some of the following tasks:
+#### Token
+- Make a token contract with token name "MyToken"
+- To run script `yarn ts-node --files ./scripts/Token/deployment.ts`
+- Which gives us a contract Address <a href="https://goerli.etherscan.io/address/0xe95E54Bc0eeC8d3c51B0486d127ADf93Edd4e6bc" target="_blank">0xe95E54Bc0eeC8d3c51B0486d127ADf93Edd4e6bc</a>
+#### Custom Ballot
+- Make a contract with proposals as parameters in our case the parameters are ("Samosa","Kebab","Jalebi")
+- To run script `yarn ts-node --files ./scripts/Ballot/deployment.ts Samosa Kebab Jalebi`
+- Which gives us a contract Address <a href="https://goerli.etherscan.io/tx/0xd2a9ed6ff19b2011d5cc8608ec781858b6fdfed9f71c689a176d51b73af97c3d" target="_blank">0x63f3D511472DBCaA8d28C89d67273d6eA83C34C4</a>
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-npx hardhat help
-REPORT_GAS=true npx hardhat test
-npx hardhat coverage
-npx hardhat run scripts/deploy.ts
-TS_NODE_FILES=true npx ts-node scripts/deploy.ts
-npx eslint '**/*.{js,ts}'
-npx eslint '**/*.{js,ts}' --fix
-npx prettier '**/*.{json,sol,md}' --check
-npx prettier '**/*.{json,sol,md}' --write
-npx solhint 'contracts/**/*.sol'
-npx solhint 'contracts/**/*.sol' --fix
-```
 
-# Etherscan verification
+### Step 2 Minting tokens
 
-To try out Etherscan verification, you first need to deploy a contract to an Ethereum network that's supported by Etherscan, such as Ropsten.
 
-In this project, copy the .env.example file to a file named .env, and then edit it to fill in the details. Enter your Etherscan API key, your Ropsten node URL (eg from Alchemy), and the private key of the account which will send the deployment transaction. With a valid .env file in place, first deploy your contract:
+### Step 3 Creating a ballot
 
-```shell
-hardhat run --network ropsten scripts/deploy.ts
-```
 
-Then, copy the deployment address and paste it in to replace `DEPLOYED_CONTRACT_ADDRESS` in this command:
+### Step 4 Give right to vote
 
-```shell
-npx hardhat verify --network ropsten DEPLOYED_CONTRACT_ADDRESS "Hello, Hardhat!"
-```
 
-# Performance optimizations
+### Step 5 Delegate the vote
 
-For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable `TS_NODE_TRANSPILE_ONLY` to `1` in hardhat's environment. For more details see [the documentation](https://hardhat.org/guides/typescript.html#performance-optimizations).
+
+### Step 6 Cast a vote
+
+
+### Step 7 Query voting results
+
+- 
+

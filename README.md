@@ -23,6 +23,7 @@
 
 
 ### Step 2 Minting tokens
+To do
 
 
 ### Step 3 Creating a ballot
